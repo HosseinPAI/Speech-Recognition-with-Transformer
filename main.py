@@ -21,8 +21,8 @@ if __name__ == '__main__':
     parser.add_argument('--csv_path', type=str, default='',
                         help='Final CSV files path')
     parser.add_argument('--result_path', type=str, default='', help='result path')
-    parser.add_argument('--epoch', type=int, default=1, help='Number of epoch')
-    parser.add_argument('--batch_size', type=int, default=2, help='The size of each batch')
+    parser.add_argument('--epoch', type=int, default=30, help='Number of epoch')
+    parser.add_argument('--batch_size', type=int, default=12, help='The size of each batch')
 
     # Start Process
     args = parser.parse_args()
@@ -34,7 +34,6 @@ if __name__ == '__main__':
         os.makedirs(args.extract_path)
 
     # Extract All Files in Dataset
-    '''
     start_time = time.time()
     print(">>> Starting VoxForge dataset files extraction.")
     files = os.listdir(args.dataset_path)
@@ -42,7 +41,7 @@ if __name__ == '__main__':
         file_path = args.dataset_path + '/' + file
         extract(file_path, args.extract_path)
     print('>>> Extracting Process is Finishes in {0:.1f} min'.format((time.time()-start_time)/60.00))
-    '''
+
     # Create Dataset Diectories to prepare and clean data
     main_dir = create_directory()
     if not os.path.exists(main_dir):
@@ -53,7 +52,7 @@ if __name__ == '__main__':
     args.csv_path = current_dir + '/csv'
     if not os.path.exists(args.csv_path):
         os.makedirs(args.csv_path)
-    #prepare_valid_data(args.csv_path)
+    prepare_valid_data(args.csv_path)
 
     # Create Result Directory
     current_dir = os.getcwd()
