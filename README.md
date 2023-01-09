@@ -33,7 +33,7 @@ In this project, we use <a href="https://pytorch.org/docs/stable/generated/torch
 
 ### How to run this project:
 <p align="justify">
-You should follow these few steps to show the result, but we should be aware that the dataset size is massive, so training the model takes a lot of time, which depends on the number of epochs.
+You should follow these few steps to show the result, but you should be aware that the dataset size is massive, so training the model takes a lot of time, which depends on the number of epochs.
 </p>
 
 1. There is a **.sh** file in the project folder. Running the following command in the terminal downloads the [Voxforge dataset](http://www.voxforge.org/home/Downloads) into the project directory. It may take a couple of hours because it is more than 10 GB.
@@ -48,7 +48,6 @@ You should follow these few steps to show the result, but we should be aware tha
 <p align="justify">
 You can change the number of <strong>epochs</strong> and <strong>batch</strong> size based on your GPU power. You must train this model for <strong>at least 20 epochs </strong>to see the acceptable result.
 </p>
-<br />
 <p align="justify">
 All necessary libraries are written in the <strong>requirements.txt</strong> file.  
 </p>
